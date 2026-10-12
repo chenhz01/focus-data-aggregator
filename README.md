@@ -2,6 +2,8 @@
 
 focus-data-aggregator validates focus-session records against a schema, aggregates focus minutes per day or per ISO week, and classifies interruption causes into self / external / tech / unknown. Use it to turn a personal focus log (JSONL) into a defensible daily score instead of eyeballing notes. Confidence: High (≥80%) for validation and aggregation behavior, per the 75-check suite.
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 People track focus sessions in free-form logs — start/end times, a task name, notes about what interrupted them. The raw data is unusable: mixed valid/invalid records, durations that need computing, interruption causes that need bucketing before any number is trustworthy. What is missing is a strict, offline validator + aggregator that separates good records from bad *before* computing anything, instead of letting one malformed row poison the stats.
